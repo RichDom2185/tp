@@ -8,26 +8,52 @@ We are a team based in the [School of Computing, National University of Singapor
 You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 ## Project team
+### Mai Ting Kai
 
-### John Doe
+<img src="images/ferusel.png" width="200px">
 
-<img src="images/johndoe.png" width="200px">
+[[github](https://github.com/ferusel)]
+[[portfolio](team/ferusel.md)]
 
-[[homepage](http://www.comp.nus.edu.sg/~damithch)]
-[[github](https://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+- Role: Team Lead
 
-* Role: Project Advisor
+### Bryan Lim Jing Xiang
 
-### Jane Doe
+<img src="images/bryanljx.png" width="200px">
 
-<img src="images/johndoe.png" width="200px">
+[[github](https://github.com/bryanljx)]
+[[portfolio](team/bryanljx.md)]
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+- Role: Project Member
 
-* Role: Team Lead
-* Responsibilities: UI
+
+### Richard Dominick
+
+<img src="images/richdom2185.png" width="200px">
+
+[[github](https://github.com/RichDom2185)]
+[[portfolio](team/richdom2185.md)]
+
+- Role: Project Member
+
+### Tan Wei Lie Eugene
+
+<img src="images/eugenetanwl3881.png" width="200px">
+
+[[github](https://github.com/eugenetanwl3881)]
+[[portfolio](team/eugenetanwl3881.md)]
+
+- Role: Project Member
+
+### Tan Yi Xian
+
+<img src="images/yixiann.png" width="200px">
+
+[[github](https://github.com/yixiann)]
+
+[[portfolio](team/yixiann.md)]
+
+- Role: Secretary
 
 ### Johnny Doe
 
@@ -35,8 +61,8 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 [[github](http://github.com/johndoe)] [[portfolio](team/johndoe.md)]
 
-* Role: Developer
-* Responsibilities: Data
+- Role: Developer
+- Responsibilities: Data
 
 ### Jean Doe
 
@@ -45,8 +71,8 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[github](http://github.com/johndoe)]
 [[portfolio](team/johndoe.md)]
 
-* Role: Developer
-* Responsibilities: Dev Ops + Threading
+- Role: Developer
+- Responsibilities: Dev Ops + Threading
 
 ### James Doe
 
@@ -55,5 +81,5 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[github](http://github.com/johndoe)]
 [[portfolio](team/johndoe.md)]
 
-* Role: Developer
-* Responsibilities: UI
+- Role: Developer
+- Responsibilities: UI
