@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 import seedu.foodrem.commons.core.index.Index;
+import seedu.foodrem.enums.CommandWord;
 import seedu.foodrem.logic.commands.Command;
 import seedu.foodrem.logic.commands.CommandResult;
 import seedu.foodrem.logic.commands.exceptions.CommandException;
@@ -21,11 +22,11 @@ import seedu.foodrem.model.tag.Tag;
  */
 public class TagCommand extends Command {
 
-    public static final String COMMAND_WORD = "tag";
+    public static final String COMMAND_WORD = CommandWord.TAG_COMMAND.getValue();
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
             + ": Tags the item identified by the index number used in the displayed item list with a valid Tag.\n"
-            + "Parameters: " + PREFIX_ID + " INDEX (must be a positive integer) " + PREFIX_NAME + "TAG_NAME\n"
+            + "Parameters: " + PREFIX_NAME + "TAG_NAME" + PREFIX_ID + "INDEX (item index must be a positive integer)\n"
             + "Example: " + COMMAND_WORD + " " + PREFIX_NAME + "Condiments " + PREFIX_ID + "1";
 
     public static final String MESSAGE_SUCCESS = "Item tagged successfully";

@@ -1,10 +1,13 @@
 package seedu.foodrem.model.item;
 
+import static java.util.Objects.requireNonNull;
+import static seedu.foodrem.commons.util.AppUtil.checkArgument;
 import static seedu.foodrem.commons.util.CollectionUtil.requireAllNonNull;
 
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import seedu.foodrem.model.tag.Tag;
 
@@ -57,7 +60,7 @@ public class Item {
      * @param unit       Unit of the item.
      * @param boughtDate Date when the item was purchased.
      * @param expiryDate Date when the item will expire.
-     * @param tagSet The set of tags in item
+     * @param tagSet     The set of tags in item
      */
     public Item(ItemName name,
                 ItemQuantity quantity,
@@ -71,6 +74,27 @@ public class Item {
         this.boughtDate = boughtDate;
         this.expiryDate = expiryDate;
         this.tagSet = tagSet;
+    }
+
+    /**
+     * Creates and returns a {@code Item} with the tagSet of {@code itemToUntag}
+     * edited
+     */
+    public static Item createUntaggedItem(Item itemToUntag, Tag tag) {
+        requireNonNull(itemToUntag);
+        requireNonNull(tag);
+
+        checkArgument(itemToUntag.containsTag(tag));
+
+        itemToUntag.removeItemTag(tag);
+
+        return new Item(itemToUntag.getName(),
+                itemToUntag.getQuantity(),
+                itemToUntag.getUnit(),
+                itemToUntag.getBoughtDate(),
+                itemToUntag.getExpiryDate(),
+                itemToUntag.getTagSet()
+        );
     }
 
 
@@ -102,10 +126,7 @@ public class Item {
      * Returns true if item contains a certain tag.
      */
     public boolean containsTag(Tag tag) {
-        if (tagSet.contains(tag)) {
-            return true;
-        }
-        return false;
+        return tagSet.contains(tag);
     }
 
     /**
@@ -167,7 +188,7 @@ public class Item {
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(name, quantity, unit, boughtDate, expiryDate);
+        return Objects.hash(name, quantity, unit, boughtDate, expiryDate, tagSet);
     }
 
     /**
@@ -175,11 +196,13 @@ public class Item {
      */
     @Override
     public String toString() {
-        return String.format("Name: %s; Quantity: %s%s; Bought Date: %s; Expiry Date: %s;",
+        String tagsString = tagSet.stream().map(Tag::getName).collect(Collectors.joining(", "));
+        return String.format("Name: %s\nQuantity: %s%s\nBought Date: %s\nExpiry Date: %s\nTags: {%s}\n",
                 name,
                 quantity,
                 String.valueOf(unit).isBlank() ? "" : " " + unit,
                 String.valueOf(boughtDate).isBlank() ? "Not Set" : boughtDate,
-                String.valueOf(expiryDate).isBlank() ? "Not Set" : expiryDate);
+                String.valueOf(expiryDate).isBlank() ? "Not Set" : expiryDate,
+                tagsString);
     }
 }
