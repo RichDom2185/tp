@@ -197,6 +197,8 @@ The command will produce a detailed view of this item.
 
 ---
 
+{% include page-break.html %}
+
 #### Increment the quantity of an item: `inc`
 
 **Format:**: `inc INDEX [qty/QUANTITY]`
@@ -224,6 +226,8 @@ The command will produce a detailed view of this item.
 %}
 
 ---
+
+{% include page-break.html %}
 
 #### Decrement the quantity of an item: `dec`
 
